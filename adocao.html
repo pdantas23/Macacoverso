@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adoção - Macacoverso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>Macacoverso 🐒🌿</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="adocao.html">Adoção</a>
+      <a href="visitas.html">Visitas</a>
+      <a href="doacoes.html">Doações</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <h2>Adoção Simbólica</h2>
+
+    <div class="macaco">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Capuchin_Costa_Rica.jpg" alt="Macaco" />
+      <p><strong>Nome:</strong> Chico</p>
+      <p><strong>Espécie:</strong> Macaco-prego</p>
+      <p><strong>História:</strong> Resgatado de cativeiro ilegal em 2022.</p>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <button type="submit">Adotar simbolicamente</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>© 2025 Macacoverso. Todos os direitos reservados.</footer>
+  <script type="module">
+  import { Adocao } from './forms.js';
+  const adocao = new Adocao("formAdocao");
+  adocao.init();
+  </script>
+</body>
+</html>

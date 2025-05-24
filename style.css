@@ -1,0 +1,102 @@
+/* Reset básico e estrutura flex para o body */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f9f0;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteúdo principal flexível para ocupar o espaço entre header e footer */
+.conteudo {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+}
+
+.conteudo h2, h3 {
+  text-align: center;
+}
+
+/* Topo / header */
+.topo {
+  background-color: #4caf50;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.topo h1 {
+  color: #fff;
+  margin: 0;
+}
+
+/* Navegação */
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé fixo na parte baixa */
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+/* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+button {
+  background-color: #388e3c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+/* Cartões de macaco */
+.macaco {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  background: #fff;
+}
+
+.macaco img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
