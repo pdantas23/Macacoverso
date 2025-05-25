@@ -1,4 +1,3 @@
-/* Reset básico e estrutura flex para o body */
 html, body {
   height: 100%;
   margin: 0;
@@ -9,7 +8,6 @@ html, body {
   flex-direction: column;
 }
 
-/* Conteúdo principal flexível para ocupar o espaço entre header e footer */
 .conteudo {
   flex: 1;
   padding: 2rem;
@@ -28,10 +26,12 @@ html, body {
 }
 
 .conteudo img {
-    width: 100%;
+  display: block;
+  width: 80%;
+  height: 80%;
+  margin: auto;
 }
 
-/* Topo / header */
 .topo {
   background-color: #4caf50;
   padding: 1rem;
