@@ -20,21 +20,25 @@
 
   <main class="conteudo">
     <h2>Agende sua Visita</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required />
-      <input type="email" placeholder="Seu e-mail" required />
-      <input type="date" required />
-      <input type="number" placeholder="Número de pessoas" required />
-      <textarea placeholder="Mensagem ou preferências"></textarea>
+
+    <!-- Formulário com ID e atributos name corretos -->
+    <form id="formVisita">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="date" name="dataVisita" required />
+      <input type="number" name="quantidade" placeholder="Número de pessoas" required />
+      <textarea name="mensagem" placeholder="Mensagem ou preferências"></textarea>
       <button type="submit">Enviar Agendamento</button>
     </form>
   </main>
 
   <footer>© 2025 Macacoverso. Todos os direitos reservados.</footer>
+
+  <!-- Script de inicialização -->
   <script type="module">
-  import { Visita } from './forms.js';
-  const visita = new Visita("formVisita");
-  visita.init();
+    import { Visita } from './forms.js';
+    const visita = new Visita("formVisita");
+    visita.init();
   </script>
 </body>
 </html>

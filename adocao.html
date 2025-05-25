@@ -26,19 +26,24 @@
       <p><strong>Nome:</strong> Chico</p>
       <p><strong>Espécie:</strong> Macaco-prego</p>
       <p><strong>História:</strong> Resgatado de cativeiro ilegal em 2022.</p>
-      <form>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
+
+      <!-- Formulário com ID e atributos name corretos -->
+      <form id="formAdocao">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="hidden" name="macaco" value="Chico" />
         <button type="submit">Adotar simbolicamente</button>
       </form>
     </div>
   </main>
 
   <footer>© 2025 Macacoverso. Todos os direitos reservados.</footer>
+
+  <!-- Script de inicialização do formulário -->
   <script type="module">
-  import { Adocao } from './forms.js';
-  const adocao = new Adocao("formAdocao");
-  adocao.init();
+    import { Adocao } from './forms.js';
+    const adocao = new Adocao("formAdocao");
+    adocao.init();
   </script>
 </body>
 </html>
