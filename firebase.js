@@ -1,9 +1,7 @@
-// firebase.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
 
-// Configuração do Firebase (substitua pelos seus dados)
 const firebaseConfig = {
   apiKey: "AIzaSyDKvSfOk0luDH0qUJblKy1MQCfJOO-69Yc",
   authDomain: "macacoverso-1191f.firebaseapp.com",
@@ -14,12 +12,10 @@ const firebaseConfig = {
   measurementId: "G-6XP94PF7C6"
 };
 
-// Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-// Função para salvar adoção
 export async function salvarAdocao(dados) {
   try {
     const docRef = await addDoc(collection(db, "adocoes"), {
@@ -32,7 +28,6 @@ export async function salvarAdocao(dados) {
   }
 }
 
-// Função para salvar visita
 export async function salvarVisita(dados) {
   try {
     const docRef = await addDoc(collection(db, "visitas"), {
@@ -45,7 +40,6 @@ export async function salvarVisita(dados) {
   }
 }
 
-// Função para salvar doação
 export async function salvarDoacao(dados) {
   try {
     const docRef = await addDoc(collection(db, "doacoes"), {

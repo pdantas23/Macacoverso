@@ -1,21 +1,31 @@
 import { salvarAdocao, salvarVisita, salvarDoacao } from './firebase.js';
 
 export class Adocao {
-  constructor(formId) {
-    this.form = document.getElementById(formId);
+  constructor(formClass) {
+    this.forms = document.querySelectorAll(`.${formClass}`);
   }
 
   init() {
-    if (!this.form) return;
-    this.form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const dados = {
-        nome: this.form.nome.value,
-        email: this.form.email.value,
-        macaco: this.form.macaco.value,
-      };
-      salvarAdocao(dados);
-      this.form.reset();
+    this.forms.forEach((form) => {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const dados = {
+          nome: form.nome.value,
+          email: form.email.value,
+          macaco: form.macaco.value,
+        };
+
+        salvarAdocao(dados)
+          .then(() => {
+            alert("Adoção registrada com sucesso!");
+            form.reset();
+          })
+          .catch((erro) => {
+            console.error("Erro ao salvar:", erro);
+            alert("Erro ao registrar adoção.");
+          });
+      });
     });
   }
 }

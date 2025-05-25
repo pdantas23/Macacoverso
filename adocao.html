@@ -22,27 +22,54 @@
     <h2>Adoção Simbólica</h2>
 
     <div class="macaco">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Capuchin_Costa_Rica.jpg" alt="Macaco" />
+      <img src="https://images.pexels.com/photos/26925017/pexels-photo-26925017/free-photo-of-natureza-sentado-retrato-macaco.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Macaco" />
       <p><strong>Nome:</strong> Chico</p>
       <p><strong>Espécie:</strong> Macaco-prego</p>
       <p><strong>História:</strong> Resgatado de cativeiro ilegal em 2022.</p>
-
-      <!-- Formulário com ID e atributos name corretos -->
-      <form id="formAdocao">
+      
+      <form class="formAdocao">
         <input type="text" name="nome" placeholder="Seu nome" required />
         <input type="email" name="email" placeholder="Seu e-mail" required />
         <input type="hidden" name="macaco" value="Chico" />
         <button type="submit">Adotar simbolicamente</button>
       </form>
     </div>
+
+    <div class="macaco">
+      <img src="https://images.pexels.com/photos/6796583/pexels-photo-6796583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Macaco" />
+      <p><strong>Nome:</strong> Pedro</p>
+      <p><strong>Espécie:</strong> Babuíno</p>
+      <p><strong>História:</strong> Resgatado de um circo há 5 anos.</p>
+
+      <form class="formAdocao">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="hidden" name="macaco" value="Pedro" />
+        <button type="submit">Adotar simbolicamente</button>
+      </form>
+    </div>
+
+    <div class="macaco">
+      <img src="https://images.pexels.com/photos/67007/pexels-photo-67007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Macaco" />
+      <p><strong>Nome:</strong> Davi</p>
+      <p><strong>Espécie:</strong> Macaco-aranha</p>
+      <p><strong>História:</strong> Foi domesticado e não pode voltar à natureza.</p>
+
+      <form class="formAdocao">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="hidden" name="macaco" value="Davi" />
+        <button type="submit">Adotar simbolicamente</button>
+      </form>
+    </div>
+
   </main>
 
   <footer>© 2025 Macacoverso. Todos os direitos reservados.</footer>
 
-  <!-- Script de inicialização do formulário -->
   <script type="module">
     import { Adocao } from './forms.js';
-    const adocao = new Adocao("formAdocao");
+    const adocao = new Adocao('.formAdocao'); 
     adocao.init();
   </script>
 </body>

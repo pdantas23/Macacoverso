@@ -13,13 +13,22 @@ html, body {
 .conteudo {
   flex: 1;
   padding: 2rem;
+  width: 70%;
   max-width: 800px;
   margin: auto;
   text-align: justify;
 }
 
-.conteudo h2, h3 {
+.conteudo p, h2, h3 {
   text-align: center;
+}
+
+.conteudo h4 {
+    text-align: justify;
+}
+
+.conteudo img {
+    width: 100%;
 }
 
 /* Topo / header */
@@ -95,6 +104,7 @@ button:hover {
 
 .macaco img {
   width: 100%;
+  max-height: 200px;
   max-width: 300px;
   border-radius: 8px;
   display: block;
