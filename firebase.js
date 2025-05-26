@@ -18,36 +18,39 @@ const db = getFirestore(app);
 
 export async function salvarAdocao(dados) {
   try {
-    const docRef = await addDoc(collection(db, "adocoes"), {
+    console.log("Tentando salvar no Firestore...", dados);
+    await addDoc(collection(db, "adocoes"), {
       ...dados,
       data: new Date().toISOString()
     });
-    alert("Adoção registrada com sucesso!");
   } catch (e) {
     alert("Erro ao registrar adoção: " + e.message);
+    throw e;
   }
 }
 
 export async function salvarVisita(dados) {
   try {
-    const docRef = await addDoc(collection(db, "visitas"), {
+    await addDoc(collection(db, "visitas"), {
       ...dados,
       data: new Date().toISOString()
     });
     alert("Visita agendada com sucesso!");
   } catch (e) {
     alert("Erro ao agendar visita: " + e.message);
+    throw e;
   }
 }
 
 export async function salvarDoacao(dados) {
   try {
-    const docRef = await addDoc(collection(db, "doacoes"), {
+    await addDoc(collection(db, "doacoes"), {
       ...dados,
       data: new Date().toISOString()
     });
     alert("Doação registrada com sucesso! Muito obrigado!");
   } catch (e) {
     alert("Erro ao registrar doação: " + e.message);
+    throw e;
   }
 }

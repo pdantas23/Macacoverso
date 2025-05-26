@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Visitas - Macacoverso</title>
+  <title>Adoção - Macacoverso</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,23 +19,58 @@
   </header>
 
   <main class="conteudo">
-    <h2>Agende sua Visita</h2>
+    <h2>Adoção Simbólica</h2>
 
-    <form id="formVisita">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <input type="date" name="dataVisita" required />
-      <input type="number" name="quantidade" placeholder="Número de pessoas" required />
-      <textarea name="mensagem" placeholder="Mensagem ou preferências"></textarea>
-      <button type="submit">Enviar Agendamento</button>
-    </form>
+    <div class="macaco">
+      <img src="https://images.pexels.com/photos/26925017/pexels-photo-26925017/free-photo-of-natureza-sentado-retrato-macaco.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Macaco" />
+      <p><strong>Nome:</strong> Chico</p>
+      <p><strong>Espécie:</strong> Macaco-prego</p>
+      <p><strong>História:</strong> Resgatado de cativeiro ilegal em 2022.</p>
+      
+      <form class="formAdocao">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="hidden" name="macaco" value="Chico" />
+        <button type="submit">Adotar simbolicamente</button>
+      </form>
+    </div>
+
+    <div class="macaco">
+      <img src="https://images.pexels.com/photos/6796583/pexels-photo-6796583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Macaco" />
+      <p><strong>Nome:</strong> Pedro</p>
+      <p><strong>Espécie:</strong> Babuíno</p>
+      <p><strong>História:</strong> Resgatado de um circo há 5 anos.</p>
+
+      <form class="formAdocao">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="hidden" name="macaco" value="Pedro" />
+        <button type="submit">Adotar simbolicamente</button>
+      </form>
+    </div>
+
+    <div class="macaco">
+      <img src="https://images.pexels.com/photos/67007/pexels-photo-67007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Macaco" />
+      <p><strong>Nome:</strong> Davi</p>
+      <p><strong>Espécie:</strong> Macaco-aranha</p>
+      <p><strong>História:</strong> Foi domesticado e não pode voltar à natureza.</p>
+
+      <form class="formAdocao">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="hidden" name="macaco" value="Davi" />
+        <button type="submit">Adotar simbolicamente</button>
+      </form>
+    </div>
+
   </main>
 
   <footer>© 2025 Macacoverso. Todos os direitos reservados.</footer>
+
   <script type="module">
-    import { Visita } from './forms.js';
-    const visita = new Visita("formVisita");
-    visita.init();
+    import { Adocao } from './forms.js';
+    const adocao = new Adocao('formAdocao'); // passe só o nome da classe sem ponto
+    adocao.init();
   </script>
 </body>
 </html>
