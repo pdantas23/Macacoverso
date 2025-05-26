@@ -27,9 +27,9 @@
       <p><strong>Espécie:</strong> Macaco-prego</p>
       <p><strong>História:</strong> Resgatado de cativeiro ilegal em 2022.</p>
       
-      <form class="formAdocao">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
+      <form class="formAdocao" autocomplete="off">
+        <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" required />
+        <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required />
         <input type="hidden" name="macaco" value="Chico" />
         <button type="submit">Adotar simbolicamente</button>
       </form>
@@ -41,9 +41,9 @@
       <p><strong>Espécie:</strong> Babuíno</p>
       <p><strong>História:</strong> Resgatado de um circo há 5 anos.</p>
 
-      <form class="formAdocao">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
+      <form class="formAdocao" autocomplete="off">
+        <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" required />
+        <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required />
         <input type="hidden" name="macaco" value="Pedro" />
         <button type="submit">Adotar simbolicamente</button>
       </form>
@@ -55,21 +55,20 @@
       <p><strong>Espécie:</strong> Macaco-aranha</p>
       <p><strong>História:</strong> Foi domesticado e não pode voltar à natureza.</p>
 
-      <form class="formAdocao">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
+      <form class="formAdocao" autocomplete="off">
+        <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" required />
+        <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required />
         <input type="hidden" name="macaco" value="Davi" />
         <button type="submit">Adotar simbolicamente</button>
       </form>
     </div>
-
   </main>
 
   <footer>© 2025 Macacoverso. Todos os direitos reservados.</footer>
 
   <script type="module">
     import { Adocao } from './forms.js';
-    const adocao = new Adocao('.formAdocao'); 
+    const adocao = new Adocao('formAdocao'); 
     adocao.init();
   </script>
 </body>
