@@ -11,6 +11,5 @@ O **Macacoverso** é um projeto desenvolvido como parte da disciplina de Program
 
 ## Como rodar o projeto
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/pdantas23/Macacoverso.git
+1. Acesse esse link:
+   https://pdantas23.github.io/Macacoverso/
