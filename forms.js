@@ -35,15 +35,20 @@ export class Visita {
 
   init() {
     if (!this.form) return;
+
     this.form.addEventListener("submit", async (e) => {
       e.preventDefault();
+
       const dados = {
         nome: this.form.nome.value.trim(),
         email: this.form.email.value.trim(),
-        dataVisita: this.form.dataVisita.value,
+        data: this.form.data.value,       
+        horario: this.form.horario.value, 
       };
+
       try {
         await salvarVisita(dados);
+        alert("Visita agendada com sucesso!");
         this.form.reset();
       } catch (error) {
         alert("Erro ao agendar visita: " + error.message);
@@ -51,6 +56,7 @@ export class Visita {
     });
   }
 }
+
 
 export class Doacao {
   constructor(formId) {

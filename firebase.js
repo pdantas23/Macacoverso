@@ -33,9 +33,8 @@ export async function salvarVisita(dados) {
   try {
     await addDoc(collection(db, "visitas"), {
       ...dados,
-      data: new Date().toISOString()
+      dataRegistro: new Date().toISOString() 
     });
-    alert("Visita agendada com sucesso!");
   } catch (e) {
     alert("Erro ao agendar visita: " + e.message);
     throw e;
