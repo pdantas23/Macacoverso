@@ -1,4 +1,4 @@
-import { salvarAdocao, salvarVisita, salvarDoacao } from './firebase.js';
+import { salvarAdocao, salvarVisita, salvarDoacao, salvarContato } from './firebase.js';
 
 export class Adocao {
   constructor(formClass) {
@@ -77,6 +77,35 @@ export class Doacao {
         this.form.reset();
       } catch (error) {
         alert("Erro ao registrar doação: " + error.message);
+      }
+    });
+  }
+}
+
+export class Contato {
+  constructor(formId) {
+    this.form = document.getElementById(formId);
+  }
+
+  init() {
+    if (!this.form) return;
+
+    this.form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const dados = {
+        nome: this.form.nome.value.trim(),
+        email: this.form.email.value.trim(),
+        assunto: this.form.assunto.value.trim(),
+        mensagem: this.form.mensagem.value.trim(),
+      };
+
+      try {
+        await salvarContato(dados);
+        alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        this.form.reset();
+      } catch (error) {
+        alert("Erro ao enviar mensagem: " + error.message);
       }
     });
   }

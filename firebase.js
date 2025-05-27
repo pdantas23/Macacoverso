@@ -53,3 +53,18 @@ export async function salvarDoacao(dados) {
     throw e;
   }
 }
+
+export async function salvarContato(dados) {
+  try {
+    console.log("Enviando dados para o Firestore:", dados);
+    await addDoc(collection(db, "contatos"), {
+      ...dados,
+      dataEnvio: new Date().toISOString()
+    });
+    console.log("Contato salvo com sucesso!");
+  } catch (e) {
+    console.error("Erro ao salvar contato:", e);
+    alert("Erro ao enviar mensagem: " + e.message);
+    throw e;
+  }
+}
